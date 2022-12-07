@@ -8,8 +8,25 @@ body {
   padding: 20px;
 }
 
-.main {
+main {
   background-color: #F5F5F5;
   height: 400px;
   width: 400px;
+  border-radius: 10%;
+  margin-right: 15px;
+  
+  
+}
+.instructions{
+  border: solid black;
+  background-color: #F5F5F5 ;
+  height: 400px;
+  width: 200px;
+  border-radius: 5%;
+  
+  
+  
+}
+.App{
+  display: flex;
 }

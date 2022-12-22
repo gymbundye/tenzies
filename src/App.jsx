@@ -16,6 +16,10 @@ function App()
         }
         return newDice
     }
+
+    function rollDice() {
+      setDice(allNewDice())
+  }
     
     const diceElements = dice.map(die => <Die value={die} />)
     
@@ -27,6 +31,7 @@ function App()
             <div className="dice-box">
                 {diceElements}
             </div>
+            <button className='button' onClick={rollDice}>Roll</button>
             </main>
         </div>
     )

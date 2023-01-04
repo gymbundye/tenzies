@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 4px rgb(196, 196, 12);
+  box-shadow: 4px 4px 4px #59E391;
 }
 .instructions{
   
@@ -26,7 +26,7 @@ main {
   height: 400px;
   width: 200px;
   border-radius: 5%;
-  box-shadow: 4px 4px 4px yellow;
+  box-shadow: 4px 4px 4px #59E391;
   
   
 }
@@ -44,6 +44,12 @@ main {
   margin: 20px;
   
 }
+.button:focus{
+  outline: none;
+}
+.button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
 .dice-face, .button{
   height: 50px;
   width: 50px;
@@ -53,7 +59,7 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: white;
+  
 }
 .dice-num{
     font-size: 2rem;

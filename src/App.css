@@ -48,7 +48,7 @@ main {
 .button{
   
   margin: 20px;
-  
+  border-color: #59E391;
 }
 .button:focus{
   outline: none;

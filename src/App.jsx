@@ -3,11 +3,23 @@ import './App.css'
 import { nanoid } from 'nanoid'
 import Instructions from './Components/Instructions'
 import Die from './Components/Die'
+import Confetti from 'react-confetti'
 
 function App() 
   
   {
     const [dice, setDice] = React.useState(allNewDice())
+    const [tenzies, setTenzies] =React.useState(false)
+    
+    React.useEffect(() => {
+      const allHeld = dice.every(die => die.isHeld)
+      const firstValue = dice[0].value
+      const allSameValue = dice.every(die => die.value === firstValue)
+      if (allHeld && allSameValue) {
+          setTenzies(true)
+          console.log("You won!")
+      }
+  }, [dice])
     
     function generateNewDie() {
       return {
@@ -57,10 +69,16 @@ function App()
 
           <Instructions/>
         <main>
+          {tenzies && <Confetti/>}
             <div className="dice-box">
                 {diceElements}
             </div>
-            <button className='button' onClick={rollDice}>Roll</button>
+
+            <button className='button'
+             onClick={rollDice}>
+            {tenzies ? "New Game" : "Roll"}
+            </button>
+            
             </main>
         </div>
     )

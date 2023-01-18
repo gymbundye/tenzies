@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 4px 4px #59E391;
+  box-shadow: 5px 5px 5px  #59E391;
 }
 .instructions {
   font-family: 'Inter', sans-serif;
@@ -32,7 +32,7 @@ main {
   height: 400px;
   width: 200px;
   border-radius: 5%;
-  box-shadow: 4px 4px 4px 4px #59E391;
+  box-shadow: 5px 5px 5px  #59E391;
   
   
 }

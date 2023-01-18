@@ -38,11 +38,16 @@ function App()
     }
 
     function rollDice() {
+      if(!tenzies){
       setDice(oldDice => oldDice.map(die => {
           return die.isHeld ? 
               die :
               generateNewDie()
       }))
+    } else {
+        setTenzies(false)
+        setDice(allNewDice())
+    }
   }
   
 
@@ -78,7 +83,7 @@ function App()
              onClick={rollDice}>
             {tenzies ? "New Game" : "Roll"}
             </button>
-            
+
             </main>
         </div>
     )
